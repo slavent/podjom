@@ -11,7 +11,7 @@
 @import "photoshop-drop-shadow";
 @import "compass/css3";
 @import "compass/utilities";
-@import "../bourbon/bourbon";
+//@import "../bourbon/bourbon";
 
 // main
 @import "settings";
@@ -64,8 +64,12 @@ a[href^=tel]{
   }
 }
 
-#wrapper {
-	overflow: hidden;
+.wrapper {
+	//overflow: hidden;
+
+	@include background-image(radial-gradient(center top, ellipse cover, rgba(241,241,233,1) 0%,rgba(186,185,181,0) 100%));
+	min-height: 100%;
+	//@include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
 }
 
 h1, h2, h3, h4 {
@@ -119,4 +123,5 @@ a, a:link, a:visited {
 .container {
 	position: relative;
 	z-index: 1;
+	overflow: visible;
 }
