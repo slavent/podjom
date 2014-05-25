@@ -1,8 +1,8 @@
 header.header
-  .container
+  .container.container--header-top
     .col-2
       img(src="i/logo.png")
-    .col-4.push-1
+    .col-5.push-1
       div.callback.callback--phone
         .amazingbox
           span Звоните нам по бесплатному номеру:
@@ -15,3 +15,12 @@ header.header
         .amazingcircle
       input(class="search", type="text", placeholder="Поиск по сайту")
       button(type="submit", class="search__submit"): i.fa.fa-search
+  .navigation
+    .container
+      nav
+        ul
+          - each item, i in navItems
+              if (i == 0)
+                li.active: a(href='#') #{item}
+              else
+                li: a(href='#') #{item}

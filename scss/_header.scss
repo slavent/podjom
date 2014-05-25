@@ -1,11 +1,16 @@
 
 .header {
   padding: 50px 0;
-
+  
+  .container--header-top {
+    min-height: 120px;
+  }
   .callback {
     position: relative;
     display: block;
+    top: 10px;
     &.callback--phone {
+      top: 0;
       .amazingbox {
         background: #fff;
         border: none;
@@ -41,7 +46,7 @@
   }
   .search {
     float: right;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: 10px;
     border-radius: 9999px;
     border-style: none;
@@ -72,6 +77,45 @@
     cursor: pointer;
     &:hover {
       background-color: lighten(#F8C54A, 5%);
+    }
+  }
+
+  .navigation {
+    background-color: #fff;
+    margin-top: 60px;
+    ul {
+      margin: 0;
+      li {
+        list-style: none;
+        float: left;
+        margin: 0;
+        margin-right: 45px;
+        position: relative;
+        &:after {
+          display: block;
+          position: absolute;
+          content: '\205D\205D\205D';
+          right: -28px;
+          top: 17px;
+        }
+        &:last-child {
+          margin-right: 0;
+          &:after {
+            display: none;
+          }
+        }
+        a {
+          display: block;
+          padding: 18px;
+          margin: 0;
+          text-decoration: none;
+        }
+        &.active a, & a:hover {
+          background-color: #77b143;
+          @include background-image(linear-gradient(bottom, #55850d 0%, #77b143 100%));
+          color: #fff;
+        }
+      }
     }
   }
 }
