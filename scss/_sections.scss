@@ -1,8 +1,49 @@
+.section {
+	header {
+		text-align: center;
+		height: 40px;
+		h1 {
+			position: relative;
+			display: inline-block;
+			height: 40px;
+			border: 1px solid #cb7700;
+			//@include border-radius(19px 17px 17px / 21px);
+			@include background-clip(padding-box);
+			background-color: #cb2d1d;
+			@include box-shadow(0 1px 0 rgba(255,205,141,.36), inset 0 1px 0 #f2b896);
+			@include background-image(linear-gradient(bottom, #cb7700 0%, #e19909 100%));
+			
+			color: #fff;
+			font-size: 23px;
+			padding: 7px 25px;
+			@include text-shadow(0 1px 0 #ac3019);
+
+			&:before, &:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 5px;
+				width: 28px;
+				height: 28px;
+				transform: rotate(45deg);
+				@include background-image(linear-gradient(-45deg, #cb7700 0%, #e19909 100%));
+			}
+			&:before {
+				left: -15px;
+			}
+			&:after {
+				right: -15px;
+			}
+		}
+	}
+}
 
 .section--hero {
+	padding-bottom: 0;
 	.container {
 		background: url('../i/hero-image.png') 150px bottom no-repeat;
 		min-height: 530px;
+		overflow: visible;
 	}
 	.hero--content {
 		position: relative;
@@ -37,6 +78,30 @@
 				background: url('../i/calc-towers.png') 0 0 no-repeat;
 				top: 340px; left: 100px;
 			}
+		}
+	}
+	.hero--form {
+		@extend .wellform;
+		height: 470px;
+		&:after {
+			display: block;
+			position: absolute;
+			content: '';
+			width: 215px; height: 260px;
+			top: -41px; right: -12px;
+			background: url('../i/helmet.png') 0 0 no-repeat;
+		}
+		.hero--form--inner {
+			padding: 24px;
+		}
+		h2 {
+			font-size: 23px;
+			margin-bottom: 14px;
+		}
+		p {
+			width: 230px;
+			color: #a5a5a5;
+			font-size: 14px;
 		}
 	}
 }

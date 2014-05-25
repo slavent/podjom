@@ -15,14 +15,18 @@ html(lang='ru').no-js
             a.hero__btn.hero__btn--scaffolding(href="#")
             a.hero__btn.hero__btn--towers(href="#")
           .col-5.hero--form
-            h2 Отправить заявку
-            p Наши специалисты бесплатно проконсультируют Вас в вопросах оборудования для строительства
-            form
-              fieldset
-                input(type="text", name="name", placeholder="Имя")
-                input(type="phone", name="phone", placeholder="Телефон")
-                input(type="email", name="email", placeholder="Почта")
-                input(type="text", name="text", placeholder="Текст заявки")
-                input(type="submit", value="Отправить")
+            .hero--form--inner
+              h2 Отправить заявку
+              p Наши специалисты бесплатно проконсультируют Вас в вопросах оборудования для строительства
+              form
+                fieldset
+                  input(type="text", name="name", placeholder="Имя")
+                  input(type="tel", name="phone", placeholder="Телефон")
+                  input(type="email", name="email", placeholder="Почта")
+                  input(type="text", name="text", placeholder="Текст заявки")
+                  input(type="submit", value="Отправить")
+      section.section.section--news
+        .container
+          header.zigzag: h1 Новости и спецпредложения
       include includes/footer
     include includes/tail
