@@ -1,4 +1,7 @@
 
+.section {
+  padding: 90px 0;
+}
 
 .amazingbox {
   position: relative;
@@ -14,7 +17,7 @@
   text-align: center;
   border-radius: 4px;
   border: 2px solid #94CB51;
-  @include background-image(radial-gradient(center 0, 100px 100px, rgba(172,228,110,1) 0%,rgba(120,178,64,1) 100%));
+  @include background-image(radial-gradient(center 0, 100px 100px, rgba(172,228,110,.5) 0%,rgba(120,178,64,1) 100%));
 }
 .amazingcircle {
   position: absolute;

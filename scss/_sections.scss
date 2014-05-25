@@ -1,0 +1,42 @@
+
+.section--hero {
+	.container {
+		background: url('../i/hero-image.png') 150px bottom no-repeat;
+		min-height: 530px;
+	}
+	.hero--content {
+		position: relative;
+
+		h1 {
+			font-size: 26px;
+			font-weight: bold;
+			display: inline;
+			background: #639723;
+			box-shadow: 10px 0 0 #639723, -10px 0 0 #639723;
+			line-height: 1.3;
+			padding: 5px 0;
+			color: #FFF;
+			text-transform: uppercase;
+			position: relative;
+			top: 5px;
+		}
+		.hero__btn {
+			width: 320px;
+			height: 146px;
+			display: block;
+			position: absolute;
+			transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+			&:hover {
+				margin-top: -3px;
+			}
+			&.hero__btn--scaffolding {
+				background: url('../i/calc-scaffolding.png') 0 0 no-repeat;
+				top: 170px; left: 10px;
+			}
+			&.hero__btn--towers {
+				background: url('../i/calc-towers.png') 0 0 no-repeat;
+				top: 340px; left: 100px;
+			}
+		}
+	}
+}

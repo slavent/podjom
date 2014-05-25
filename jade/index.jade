@@ -4,14 +4,25 @@ doctype html
 html(lang='ru').no-js
   head
     include includes/head
+    | <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   body
     .wrapper
       include includes/header
-      include includes/slider
-      //- begin main  
-      .main
-        //- begin container
+      section.section.section--hero
         .container
-        //- end container
+          .col-7.hero--content
+            h1 Продажа и аренда оборудования для строительства
+            a.hero__btn.hero__btn--scaffolding(href="#")
+            a.hero__btn.hero__btn--towers(href="#")
+          .col-5.hero--form
+            h2 Отправить заявку
+            p Наши специалисты бесплатно проконсультируют Вас в вопросах оборудования для строительства
+            form
+              fieldset
+                input(type="text", name="name", placeholder="Имя")
+                input(type="phone", name="phone", placeholder="Телефон")
+                input(type="email", name="email", placeholder="Почта")
+                input(type="text", name="text", placeholder="Текст заявки")
+                input(type="submit", value="Отправить")
       include includes/footer
     include includes/tail

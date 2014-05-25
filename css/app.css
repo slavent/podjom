@@ -528,7 +528,12 @@ body {
   width: 940px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_else\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_else\.scss}line{font-family:\000032}}
+.section {
+  padding: 90px 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_else\.scss}line{font-family:\000036}}
 .amazingbox {
   position: relative;
   display: inline-block;
@@ -543,12 +548,12 @@ body {
   text-align: center;
   border-radius: 4px;
   border: 2px solid #94CB51;
-  background-image: -webkit-gradient(radial, center 0, 0, center 0, 100, color-stop(0%, #ace46e), color-stop(100%, #78b240));
-  background-image: -webkit-radial-gradient(center 0, 100px 100px, #ace46e 0%, #78b240 100%);
-  background-image: radial-gradient(center 0, 100px 100px, #ace46e 0%, #78b240 100%);
+  background-image: -webkit-gradient(radial, center 0, 0, center 0, 100, color-stop(0%, rgba(172, 228, 110, 0.5)), color-stop(100%, #78b240));
+  background-image: -webkit-radial-gradient(center 0, 100px 100px, rgba(172, 228, 110, 0.5) 0%, #78b240 100%);
+  background-image: radial-gradient(center 0, 100px 100px, rgba(172, 228, 110, 0.5) 0%, #78b240 100%);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_else\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_else\.scss}line{font-family:\0000322}}
 .amazingcircle {
   position: absolute;
   left: 0;
@@ -562,7 +567,7 @@ body {
   background-image: -webkit-radial-gradient(center 10px, ellipse cover, #ffef6f 0%, #f6c935 100%);
   background-image: radial-gradient(center 10px, ellipse cover, #ffef6f 0%, #f6c935 100%);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_else\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_else\.scss}line{font-family:\0000331}}
 .amazingcircle:after {
   display: block;
   position: absolute;
@@ -1141,7 +1146,7 @@ body:after {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_header\.scss}line{font-family:\000032}}
 .header {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_header\.scss}line{font-family:\000035}}
 .header .container--header-top {
@@ -1282,34 +1287,84 @@ body:after {
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_sections\.scss}line{font-family:\000033}}
+.section--hero .container {
+  background: url("../i/hero-image.png") 150px bottom no-repeat;
+  min-height: 530px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_sections\.scss}line{font-family:\000037}}
+.section--hero .hero--content {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_sections\.scss}line{font-family:\0000310}}
+.section--hero .hero--content h1 {
+  font-size: 26px;
+  font-weight: bold;
+  display: inline;
+  background: #639723;
+  -webkit-box-shadow: 10px 0 0 #639723, -10px 0 0 #639723;
+  box-shadow: 10px 0 0 #639723, -10px 0 0 #639723;
+  line-height: 1.3;
+  padding: 5px 0;
+  color: #FFF;
+  text-transform: uppercase;
+  position: relative;
+  top: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_sections\.scss}line{font-family:\0000323}}
+.section--hero .hero--content .hero__btn {
+  width: 320px;
+  height: 146px;
+  display: block;
+  position: absolute;
+  -webkit-transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+  transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_sections\.scss}line{font-family:\0000329}}
+.section--hero .hero--content .hero__btn:hover {
+  margin-top: -3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_sections\.scss}line{font-family:\0000332}}
+.section--hero .hero--content .hero__btn.hero__btn--scaffolding {
+  background: url("../i/calc-scaffolding.png") 0 0 no-repeat;
+  top: 170px;
+  left: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/_sections\.scss}line{font-family:\0000336}}
+.section--hero .hero--content .hero__btn.hero__btn--towers {
+  background: url("../i/calc-towers.png") 0 0 no-repeat;
+  top: 340px;
+  left: 100px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000337}}
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000343}}
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: #cac9c4;
   line-height: 150%;
   font-size: 16px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000350}}
 a[href^=tel] {
   color: inherit;
   text-decoration: none;
 }
 
 @media screen and (max-device-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000356}}
   body {
     -webkit-text-size-adjust: none;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000361}}
 .wrapper {
   background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 100, color-stop(0%, #f1f1e9), color-stop(100%, rgba(186, 185, 181, 0)));
   background-image: -webkit-radial-gradient(center top, ellipse cover, #f1f1e9 0%, rgba(186, 185, 181, 0) 100%);
@@ -1317,65 +1372,65 @@ a[href^=tel] {
   min-height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000369}}
 h1, h2, h3, h4 {
   color: #000;
   font-weight: 200;
   margin-bottom: 30px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000376}}
 h1 {
   font-size: 30px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000380}}
 p {
   line-height: 120%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000384}}
 strong {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000388}}
 .right {
   float: right !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000392}}
 .left {
   float: left !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\0000396}}
 a, input, textarea, .btn {
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003100}}
 a, a:link, a:visited {
   color: #000;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003102}}
 a:hover, a:link:hover, a:visited:hover {
   color: #333333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003107}}
 .lbox {
   display: block;
   border: 9px solid #fff;
   -webkit-box-shadow: 1px 1px 0 0 #96c4ea;
   box-shadow: 1px 1px 0 0 #96c4ea;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003112}}
 .lbox:hover {
   opacity: 0.9;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mac-mini-2\/Desktop\/src\/podjom\/src\/scss\/app\.scss}line{font-family:\00003117}}
 .container {
   position: relative;
   z-index: 1;

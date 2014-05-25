@@ -32,13 +32,7 @@
 
 // Elements
 @import "header";
-@import "slider";
-@import "specslider";
-@import "sidebar";
-@import "content";
-@import "cat";
-@import "range-slider";
-@import "footer";
+@import "sections";
 
 *, *:before, *:after {
 	-moz-box-sizing: border-box;
@@ -47,7 +41,7 @@
 }
 
 body {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	background: $bg-color;
 	line-height: 150%;
 	font-size: $text-size;

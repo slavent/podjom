@@ -17,7 +17,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
     <link rel="stylesheet" href="css/ie.css">
     -->
-    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/modernizr.js"></script><script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </head>
   <body>
     <div class="wrapper">
@@ -55,9 +55,26 @@
           </div>
         </div>
       </header>
-      <div class="main">
-        <div class="container"></div>
-      </div>
+      <section class="section section--hero">
+        <div class="container">
+          <div class="col-7 hero--content">
+            <h1>Продажа и аренда оборудования для строительства</h1><a href="#" class="hero__btn hero__btn--scaffolding"></a><a href="#" class="hero__btn hero__btn--towers"></a>
+          </div>
+          <div class="col-5 hero--form">
+            <h2>Отправить заявку</h2>
+            <p>Наши специалисты бесплатно проконсультируют Вас в вопросах оборудования для строительства</p>
+            <form>
+              <fieldset>
+                <input type="text" name="name" placeholder="Имя">
+                <input type="phone" name="phone" placeholder="Телефон">
+                <input type="email" name="email" placeholder="Почта">
+                <input type="text" name="text" placeholder="Текст заявки">
+                <input type="submit" value="Отправить">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
     <!--[if (!IE)|(gt IE 8)]><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
