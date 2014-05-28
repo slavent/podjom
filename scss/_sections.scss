@@ -2,6 +2,7 @@
 	header {
 		text-align: center;
 		height: 40px;
+		margin-bottom: 70px;
 		h1 {
 			position: relative;
 			display: inline-block;
@@ -37,6 +38,8 @@
 		}
 	}
 }
+
+
 
 .section--hero {
 	padding-bottom: 0;
@@ -102,6 +105,110 @@
 			width: 230px;
 			color: #a5a5a5;
 			font-size: 14px;
+		}
+	}
+}
+
+.section--news {
+	.container {
+		overflow: visible;
+	}
+	.slider {
+		.slide__bg {
+			position: absolute;
+			top: 0; left: 0;
+		}
+		.slide__counter {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 250px;
+			height: 114px;
+			padding: 10px 24px;
+			border: 1px solid #bf3b18;
+			background-color: #4d811b;
+			@include box-shadow(0 1px 0 rgba(255,205,141,.36), inset 0 1px 0 #f2b896);
+			@include background-image(linear-gradient(bottom, #d3351d 0%, #f56f19 100%));
+
+			h5 {
+				color: #fff;
+				font-size: 14px;
+				font-weight: bold;
+				margin-bottom: 5px;
+				line-height: 1;
+				@include text-shadow(0 1px 0 #48761c);
+			}
+
+			.countdown {
+				width: 220px;
+				ul {
+					display: block;
+					float: left;
+					margin: 0; padding: 0;
+					position: relative;
+					margin-right: 12px;
+					width: auto; height: auto;
+					label {
+						position: absolute;
+						left: 0;
+						bottom: -23px;
+						width: 100%;
+						text-align: center;
+						color: #fff;
+						font-size: 11px;
+						@include text-shadow(0 1px 0 #a9321c);
+
+					}
+					li {
+						display: block;
+						position: relative;
+						list-style: none;
+						float: left;
+						width: 44px;
+						height: 60px;
+						@include border-radius(5px);
+						@include background-clip(padding-box);
+						background-color: #313131;
+						@include box-shadow(0 1px 0 #292929, inset 0 -1px 0 #6d6565);
+						padding: 0; margin: 0;
+						margin-right: 2px;
+						text-align: center;
+						color: #fff;
+						font-size: 45px;
+						line-height: 60px;
+						font-weight: bold;
+						&:after {
+							display: block;
+							position: absolute;
+							content: '';
+							top: 0; left: 0;
+							width: 100%; height: 100%;
+							background: url('../i/cd_bg.png') 0 0 no-repeat;
+						}
+					}
+				}
+			}
+		}
+		.slide__info {
+			width: 710px;
+			height: 113px;
+			padding: 25px 30px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background-color: #77b13f;
+
+			h1, h2 {
+				color: #fff;
+				font-size: 26px;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				font-weight: bold;
+				@include text-shadow(0 1px 0 #48761c);
+			}
+			h1 {
+				font-size: 42px;
+			}
 		}
 	}
 }
