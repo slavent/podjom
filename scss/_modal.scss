@@ -1,0 +1,38 @@
+.modal {
+  display: none;
+  @extend .hero--form;
+  &:after {
+    display: none !important;
+  }
+  &#callback-form {
+    width: 350px; height: 350px !important;
+  }
+}
+
+.modal a.close-modal {
+  position: absolute;
+  top: 23px;
+  right: 27px;
+  display: block;
+  width: 19px;
+  height: 19px;
+  text-indent: -9999px;
+  background: url(../i/close.png) no-repeat 0 0;
+}
+
+.modal-spinner {
+  display: none;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -32px;
+  margin-top: -32px;
+  background: url(../i/spinner.gif) #111 no-repeat center center;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}

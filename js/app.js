@@ -1,35 +1,25 @@
 
 (function(){
 
-    /////////////////
-    //  COUNTDOWN  //
-    /////////////////
+    /////////////
+    //  MDOAL  //
+    /////////////
 
-    // var ts = new Date().getTime();
-    // var interval = 3 * 24 * 60 * 60 * 1000;
-    // var tm = 0;
-    // var result = tm + interval * ( Math.floor((ts - tm) / interval) + 1 ) - ts;
-
-    // FlipClock.Lang.Russian = {
-    //     'years'   : 'Лет',
-    //     'months'  : 'Месяцев',
-    //     'days'    : 'Дней',
-    //     'hours'   : 'Часов',
-    //     'minutes' : 'Минут',
-    //     'seconds' : 'Секунд'
-    // };
-
-    // FlipClock.Lang['ru'] = FlipClock.Lang.Russian;
-
-    // var clock = $('#countdown').FlipClock(result/1000, {
-    //     countdown: true,
-    //     language: 'ru',
-    //     showSeconds: false
-    // });
-
-    // $('.flip-clock-wrapper ul li a').on( 'click', function( event ) {
-    //     event.preventDefault();
-    // });
+    $.modal.defaults = {
+      overlay: "#FFF",        // Overlay color
+      opacity: 0.9,          // Overlay opacity
+      zIndex: 1,              // Overlay z-index.
+      escapeClose: true,      // Allows the user to close the modal by pressing `ESC`
+      clickClose: true,       // Allows the user to close the modal by clicking the overlay
+      closeText: 'Закрыть',     // Text content for the close <a> tag.
+      closeClass: '',         // Add additional class(es) to the close <a> tag.
+      showClose: true,        // Shows a (X) icon/link in the top-right corner
+      modalClass: "modal",    // CSS class added to the element being displayed in the modal.
+      spinnerHtml: null,      // HTML appended to the default spinner during AJAX requests.
+      showSpinner: false,      // Enable/disable the default spinner during AJAX requests.
+      fadeDuration: 100,     // Number of milliseconds the fade transition takes (null means no transition)
+      fadeDelay: 1.0          // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+    };
 
 
 	/////////////////
@@ -90,6 +80,24 @@
             moveRight();
     });
 
+    ////////////////////////
+    //  FORMS VALIDATION  //
+    ////////////////////////
+
+    $('a.submit').click(function(e) {
+        e.preventDefault();
+        $(this).parent().submit();
+    });
+
+    $('form').each(function() {
+        $(this).validate({
+            errorPlacement: $.noop,
+            submitHandler: function(form) {
+                $(form).submitForm();
+            }
+        });
+    });
+
 	////////////////////////
 	//  PLACEHOLDERS FIX  //
 	////////////////////////
@@ -102,24 +110,6 @@
 	}
 
 })();
-
-// 	////////////////////////
-// 	//  FORMS VALIDATION  //
-// 	////////////////////////
-
-// 	$('a.submit').click(function(e) {
-// 		e.preventDefault();
-// 		$(this).parent().submit();
-// 	});
-
-// 	$('form').each(function() {
-//         $(this).validate({
-//             errorPlacement: $.noop,
-// 	        submitHandler: function(form) {
-// 			    $(form).submitForm();
-// 			}
-//         });
-//     });
 
 // 	/////////////////
 // 	//    SCROLL   //
@@ -264,76 +254,78 @@
 
 // })(jQuery);
 
-// ////////////////////////////
-// //  FORM SUBMIT FUNCTION  //
-// ////////////////////////////
+////////////////////////////
+//  FORM SUBMIT FUNCTION  //
+////////////////////////////
 
-// $.fn.submitForm = function() {
+$.fn.submitForm = function() {
 
-// 	var form = $(this);
-// 	var preloaderHTML = '<div class="form-preloader" style="display: none;"><div><i class="fa fa-refresh fa-spin"></i></div></div>';
-// 	var okHTML = '<i class="fa fa-check"></i><br />Сообщение отправлено!';
-// 	var errorHTML = '<i class="fa fa-frown-o"></i><br />Произошла ошибка!';
+	var form = $(this);
+	var preloaderHTML = '<div class="form-preloader" style="display: none;"><div><i class="fa fa-refresh fa-spin"></i></div></div>';
+	var okHTML = '<i class="fa fa-check"></i><br />Сообщение отправлено!';
+	var errorHTML = '<i class="fa fa-frown-o"></i><br />Произошла ошибка!';
 
-// 	form.parent().append(preloaderHTML);
-// 	var preloader = $(this).parent().find('.form-preloader');
+	form.parent().append(preloaderHTML);
+	var preloader = $(this).parent().find('.form-preloader');
 
-// 	var preloaderHeight = preloader.height();
-// 	var innerHeight = preloader.find('div').height();
-// 	var preloaderPadding = ((preloaderHeight/2) - innerHeight/2) + 10;
-// 	preloader.css("padding-top", preloaderPadding + "px");
+	var preloaderHeight = preloader.height();
+	var innerHeight = preloader.find('div').height();
+	var preloaderPadding = ((preloaderHeight/2) - innerHeight/2) + 10;
+	preloader.css("padding-top", preloaderPadding + "px");
 
-// 	preloader.fadeIn(300);
+	preloader.fadeIn(300);
 
-// 	var fields = form.find("input[type=text], input[type=email]");
-// 	//var fields = form.find("input[type=text], input[type=email], input[type=checkbox], textarea");
-// 	var data = {};
-// 	data["formName"] = form.attr("data-title");
+	var fields = form.find("input[type=text], input[type=email]");
+	//var fields = form.find("input[type=text], input[type=email], input[type=checkbox], textarea");
+	var data = {};
+	data["formName"] = form.attr("data-title");
 
 
 
-// 	$(fields).each(function(){
-// 		var name = $(this).attr("name");
+	$(fields).each(function(){
+		var name = $(this).attr("name");
 
-// 		// if ($(this).attr("type")=="checkbox") {
-// 		// 	if ($(this).is(':checked')) {
-// 		// 		val = "on";
-// 		// 	} else {
-// 		// 		val = "off";
-// 		// 	}
-// 		// } else {
-// 			var val = $(this).val();
-// 		//}
+		// if ($(this).attr("type")=="checkbox") {
+		// 	if ($(this).is(':checked')) {
+		// 		val = "on";
+		// 	} else {
+		// 		val = "off";
+		// 	}
+		// } else {
+			var val = $(this).val();
+		//}
 
-// 		data[name] = val;
-// 	});
+		data[name] = val;
+	});
 
-// 	data["secret"] = "2f7d9f0d0acf89a8f6a57d79f0f7d475";
+	data["secret"] = "2f7d9f0d0acf89a8f6a57d79f0f7d475";
 
-// 	var isError = false;
+	var isError = false;
 
-// 	$.ajax({
-// 	  type: "POST",
-// 	  url: "/",
-// 	  data: JSON.stringify(data),
-// 	  contentType: "application/json; charset=utf-8",
-//       success: function (data) {
-//       	preloader.find('div').html(okHTML);
-//       },
-//       error: function (data) {
-//       	isError = true;
-//       	preloader.find('div').html(errorHTML);
-//       }
-// 	});
+	$.ajax({
+	  type: "POST",
+	  url: "/",
+	  data: JSON.stringify(data),
+	  contentType: "application/json; charset=utf-8",
+      success: function (data) {
+      	preloader.find('div').html(okHTML);
+      },
+      error: function (data) {
+      	isError = true;
+      	preloader.find('div').html(errorHTML);
+      }
+	});
 
-// 	$('.form-preloader').click(function() {
-// 		$(this).fadeOut(300, function() {
-// 			$(this).remove();
-// 		});
-// 		if (!isError) {
-// 			fields.val('');
-// 		}
-// 	});
+	$('.form-preloader').click(function() {
+		$(this).fadeOut(300, function() {
+			$(this).remove();
+		});
+		if (!isError) {
+			fields.val('');
+		}
+	});
+
+}
 
 /////////////////////////
 //  BROWSER DETECTION  //

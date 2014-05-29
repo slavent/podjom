@@ -6,6 +6,8 @@ html(lang='ru').no-js
     include includes/head
     | <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   body
+    a(href="#callback-form", rel="modal:open").rightbtn.rightbtn--callback Заказать обратный звонок
+    a(href="#request-form", rel="modal:open").rightbtn.rightbtn--request Отправить заявку
     .wrapper
       include includes/header
       section.section.section--hero
@@ -101,6 +103,131 @@ html(lang='ru').no-js
                     h2 Мы снижаем цены на леса и вышки 
                     h1 от 10% до 20% 
             .slider__dots
-
+      section.section.section--bright.section--cat
+        header.header--pulled: h1 Каталог
+        .container.content
+          .col-3.cat__item: a(href="#")
+            img(src="i/cat/1.png")
+            h5 Виброоборудование
+          .col-3.cat__item: a(href="#")
+            img(src="i/cat/2.png")
+            h5 Бетоносмесители
+            .cat__badge Сегодня со скидкой 5%
+          .col-3.cat__item: a(href="#")
+            img(src="i/cat/3.png")
+            h5 Леса и вышки
+          .col-3.cat__item: a(href="#")
+            img(src="i/cat/4.png")
+            h5 Грузоподъемное оборудование
+        .container.content
+          .col-3.push-2.cat__item: a(href="#")
+            img(src="i/cat/5.png")
+            h5 Тачки и тележки
+          .col-3.push-2.cat__item: a(href="#")
+            img(src="i/cat/6.png")
+            h5 Тепловое оборудование
+          .col-3.push-2.cat__item: a(href="#")
+            img(src="i/cat/7.png")
+            h5 Строительные материалы
+        .container.container--visible
+          .quote Мы не торгуем воздухом! Товар, представленный в каталоге, всегда есть на складе!
+      section.section.section--scheme
+        header.header--pulled: h1 Схема работы
+        .container.container--visible
+          .col-2.circle
+            span.icon-plane
+            h5.highlighted Звонок заявка
+          .col-2.circle
+            span.icon-message
+            h5 Консультация менеджера
+          .col-2.circle
+            span.icon-cash
+            h5 Расчет стоимости
+          .col-2.circle
+            span.icon-contract
+            h5 Согласование
+          .col-2.circle
+            span.icon-rouble
+            h5 Оплата
+          .col-2.circle
+            span.icon-box
+            h5 Отгрузка
+        .container.container--visible
+          .col-12.scheme__info
+            p Аренда строительных лесов в нашей компании это удобный и легкий процесс, который не занимает много времени. Все строительные леса в аренду, предоставляемые нашей компанией соответствуют всем необходимым строительным нормам и требованиям безопасности к строительным конструкциям.
+            a.btn(href="#request-form", rel="modal:open") Заполнить заявку
+      section.section.section--bright.section--principles
+        header.header--pulled: h1 Основные принципы нашей работы
+        .container
+          .col-3.princ__item
+            img(src="i/principles/1.png")
+            h5 Работа напрямую с производителем
+          .col-3.princ__item
+            img(src="i/principles/2.png")
+            h5 Вся продукция сертифицирована
+          .col-3.princ__item
+            img(src="i/principles/3.png")
+            h5 Скидки на сумму товара
+          .col-3.princ__item
+            img(src="i/principles/4.png")
+            h5 Ведение заказа персональным менеджером
+          .col-3.princ__item
+            img(src="i/principles/5.png")
+            h5 Поиск информации о любом товаре по запросу
+        .container
+          header.zigzag
+        .container.container--visible
+          .col-7
+            #map
+              | <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2910.2364389477616!2d131.92269!3d43.16256089999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3916f5244b6f3%3A0x79a504cca0ef16d0!2z0JjRgNGC0YvRiNGB0LrQsNGPINGD0LsuLCAxNSwg0JLQu9Cw0LTQuNCy0L7RgdGC0L7Quiwg0J_RgNC40LzQvtGA0YHQutC40Lkg0LrRgNCw0LksINCg0L7RgdGB0LjRjw!5e0!3m2!1sru!2s!4v1401356599208" width="480" height="260" frameborder="0" style="border:0"></iframe>
+            .contacts
+              .col-5
+                strong Адрес компании:
+                p 690033, Приморский край, г. Владивосток,<br>
+                  |ул. Иртышская, д. 15, каб. № 4.
+              .col-3
+                strong Телефон<br>
+                |8(423) 236-15-86<br>
+                |8(423) 261-78-74<br>
+                |8(423) 266-79-67
+              .col-3
+                strong E-mail:<br>
+                a(href="mailto:pod-iom@yandex.ru") pod-iom@yandex.ru
+          .col-5
+            .amazingbox
+              span Звоните нам по бесплатному номеру:
+              h1 8-800-555-30-99
+              .amazingcircle
+            .contacts__form
+              .hero--form--inner
+                h2 Отправить заявку
+                p Наши специалисты бесплатно проконсультируют Вас в вопросах оборудования для строительства
+                form
+                  fieldset
+                    input(type="text", name="name", placeholder="Имя")
+                    input(type="tel", name="phone", placeholder="Телефон")
+                    input(type="email", name="email", placeholder="Почта")
+                    input(type="text", name="text", placeholder="Текст заявки")
+                    input(type="submit", value="Отправить")
       include includes/footer
+      #callback-form.modal
+        .hero--form--inner
+          h2 Обратный звонок
+          p Наши специалисты бесплатно проконсультируют Вас в вопросах оборудования для строительства
+          form
+            fieldset
+              input(type="text", name="name", placeholder="Имя")
+              input(type="tel", name="phone", placeholder="Телефон")
+              input(type="submit", value="Отправить")
+      #request-form.modal
+        .hero--form--inner
+          h2 Отправить заявку
+          p Наши специалисты бесплатно проконсультируют Вас в вопросах оборудования для строительства
+          form
+            fieldset
+              input(type="text", name="name", placeholder="Имя")
+              input(type="tel", name="phone", placeholder="Телефон")
+              input(type="email", name="email", placeholder="Почта")
+              input(type="text", name="text", placeholder="Текст заявки")
+              input(type="submit", value="Отправить")
     include includes/tail
