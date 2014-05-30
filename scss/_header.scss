@@ -70,19 +70,26 @@
     width: 19px;
     min-width: 0;
     height: 19px;
+    //line-height: 19px;
     color: #fff;
     font-size: 9px;
     background-color: #F8C54A;
     border: 1px solid #D6A851;
-    padding: 0px;
+    padding: 3px;
     cursor: pointer;
     box-shadow: none;
     background-image: none;
     text-shadow: none;
     @include box-shadow(inset 0 1px 0 #FAE08B);
-    @include background-image(linear-gradient(bottom, #F9CB5C 0%, #F5B619 100%));
+    @include background-image(linear-gradient(to bottom, #F9CB5C 0%, #F5B619 100%));
+    .fa {
+      display: block;
+      width: 10px;
+      height: 10px;
+    }
     &:hover {
-      @include background-image(linear-gradient(bottom, lighten(#F9CB5C, 5%) 0%, lighten(#F5B619, 5%) 100%));
+      background-color: lighten(#F9CB5C, 5%);
+      @include background-image(linear-gradient(to bottom, lighten(#F9CB5C, 5%) 0%, lighten(#F5B619, 5%) 100%));
       &:active {
         top: inherit;
       }
@@ -102,11 +109,23 @@
         margin-right: 45px;
         position: relative;
         &:after {
+          font-family: 'pod-icons';
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+
+          /* Better Font Rendering =========== */
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
           display: block;
           position: absolute;
-          content: '\205D\205D\205D';
-          right: -28px;
-          top: 17px;
+          content: "\e606";
+          font-size: 10px;
+          right: -27px;
+          top: 26px;
         }
         &:last-child {
           margin-right: 0;
@@ -122,7 +141,7 @@
         }
         &.active a, & a:hover {
           background-color: #77b143;
-          @include background-image(linear-gradient(bottom, #55850d 0%, #77b143 100%));
+          @include background-image(linear-gradient(to bottom, #55850d 0%, #77b143 100%));
           color: #fff;
         }
       }

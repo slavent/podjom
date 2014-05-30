@@ -75,9 +75,11 @@ button, .btn, input[type="submit"] {
 	@include border-radius(5px);
 	@include text-shadow(0 1px 0 #5c8f2c);
 	@include box-shadow(0 1px 0 rgba(232,255,141,.36), inset 0 1px 0 #84c217);
-	@include background-image(linear-gradient(bottom, #44730c 0%, #6c9d10 100%));
+	background-color: #44730c;
+	@include background-image(linear-gradient(to bottom, #44730c 0%, #6c9d10 100%));
 	&:hover {
-		@include background-image(linear-gradient(bottom, lighten(#44730c, 5%) 0%, lighten(#6c9d10, 5%) 100%));
+		background-color: lighten(#44730c, 5%);
+		@include background-image(linear-gradient(to bottom, lighten(#44730c, 5%) 0%, lighten(#6c9d10, 5%) 100%));
 		&:active {
 			top: 2px;
 		}

@@ -2,14 +2,23 @@
 a, a:link, a:visited {
   &.rightbtn {
     position: fixed;
-    left: 0;
+    left: 36px;
     top: 50%;
     display: inline-block;
     height: 36px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
     transform: rotate(90deg);
-    transform-origin: 18px 18px 0;
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+
+    transform-origin: top left;
+    -o-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+
     padding: 0 20px;
     line-height: 36px;
     color: #FFF;
@@ -31,6 +40,33 @@ a, a:link, a:visited {
       &:hover {
         color: #FFF;
         background-color: lighten(#e3511b, 5%);
+      }
+    }
+  }
+}
+
+.no-csstransforms {
+  a, a:link, a:visited {
+    &.rightbtn {
+      text-indent: -9999px;
+      &.rightbtn--callback, &.rightbtn--request {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        border-radius: 0;
+        width: 36px;
+        left: 0;
+        
+        transform: none;
+        transform-origin: none;
+      }
+      &.rightbtn--callback {
+        background-image: url('../i/callback.png');
+        height: 255px;
+      }
+      &.rightbtn--request {
+        background-image: url('../i/request.png');
+        height: 176px;
       }
     }
   }
@@ -83,7 +119,8 @@ a, a:link, a:visited {
   height: 450px;
   padding: 5px 6px 7px 6px;
   border-radius: 20px;
-  @include background-image(linear-gradient(top, rgba(254, 202, 22, 1) 0%, rgba(204, 120, 0, 1) 100%));
+  background-color: #FECA16;
+  @include background-image(linear-gradient(to bottom, rgba(254, 202, 22, 1) 0%, rgba(204, 120, 0, 1) 100%));
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 5px 0 rgba(156, 96, 11, 0.9);
   & > div {
     box-sizing: border-box;
@@ -162,7 +199,7 @@ a, a:link, a:visited {
       &.active {
         background-color: #d2d1ce;
         @include box-shadow(0 1px 0 rgba(232,255,141,.36), inset 0 1px 0 #84c217);
-        @include background-image(linear-gradient(bottom, #589313 0%, #6c9d10 100%));
+        @include background-image(linear-gradient(to bottom, #589313 0%, #6c9d10 100%));
       }
     }
   }
