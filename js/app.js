@@ -33,16 +33,17 @@
     var slideWidth = $slider.find('ul.slider__container li.slider__item').width();
     var slideHeight = $slider.find('ul.slider__container li.slider__item').height();
     var sliderUlWidth = slideCount * slideWidth;
+
     $slider.find('ul.slider__container li.slider__item').each(function(i, el){
         $(el).attr('data-index', i);
         $slider.find('.slider__dots').append('<div class="slider__dot"></div>');
     });
     $slider.find('.slider__dot:eq(0)').addClass('active');
-    //$slider.css({ width: slideWidth, height: slideHeight });
-    
-    $slider.find('ul.slider__container').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-    
-    $slider.find('ul.slider__container li.slider__item:last-child').prependTo( $slider.find('ul.slider__container') );
+
+    if (slideCount > 1) {
+        $slider.find('ul.slider__container').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+        $slider.find('ul.slider__container li.slider__item:last-child').prependTo( $slider.find('ul.slider__container') );
+    }
 
     function moveLeft() {
         $slider.find('.slider__dot').removeClass('active');
@@ -70,13 +71,13 @@
 
     $slider.find('a.slider__prev').on('click', function (e) {
         e.preventDefault();
-        if ($slider.find('ul.slider__container:animated').length == 0)
+        if ( ($slider.find('ul.slider__container:animated').length == 0) && (slideCount > 1) )
             moveLeft();
     });
 
     $slider.find('a.slider__next').on('click', function (e) {
         e.preventDefault();
-        if ($slider.find('ul.slider__container:animated').length == 0)
+        if ( ($slider.find('ul.slider__container:animated').length == 0) && (slideCount > 1) )
             moveRight();
     });
 
