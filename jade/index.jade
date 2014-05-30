@@ -4,7 +4,7 @@ doctype html
 html(lang='ru').no-js
   head
     include includes/head
-    | <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    //-| <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   body
     a(href="#callback-form", rel="modal:open").rightbtn.rightbtn--callback Заказать обратный звонок
     a(href="#request-form", rel="modal:open").rightbtn.rightbtn--request Отправить заявку
@@ -161,6 +161,11 @@ html(lang='ru').no-js
                     input(type="email", name="email", placeholder="Почта")
                     input(type="text", name="text", placeholder="Текст заявки")
                     input(type="submit", value="Отправить")
+              .copy
+                img.icon-iastudio(src="i/iastudio-logo.svg", width="30", height="30", onerror="this.onerror=null; this.src='i/iastudio-logo.png'")
+                | Создание сайта &mdash; <br>
+                | студия 
+                a(href="http://iastudio.ru", target="_blank") «Интерактив»
       include includes/footer
       #callback-form.modal
         .hero--form--inner

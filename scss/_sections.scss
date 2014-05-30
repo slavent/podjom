@@ -446,6 +446,23 @@
 		&:after {
 			right: -52px;
 		}
+		.copy {
+			font-size: 12px;
+			line-height: 1.2;
+			position: absolute;
+			width: 200px;
+			bottom: -570px;
+			left: 100px;
+			border: none;
+			background-color: transparent;
+			.icon-iastudio {
+				float: left;
+				margin-right: 5px;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 	.princ__item {
 		text-align: center;
