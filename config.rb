@@ -1,4 +1,4 @@
-# Require any additional compass plugins here.
+# Require any additional compass plugins here!!!
 
 require 'compass-photoshop-drop-shadow'
 
